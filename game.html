@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гра про арбітраж криптовалют</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .game-container {
+      text-align: center;
+    }
+
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .status {
+      margin-top: 20px;
+    }
+
+    .price {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    canvas {
+      margin-top: 30px;
+      max-width: 80%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <h1>Гра про арбітражніка Захара</h1>
+    <p>Ваш баланс: <span id="balance">1000</span> USD</p>
+    <p>Кількість крипти: <span id="cryptoAmount">0</span> BTC</p>
+    <div class="price" id="cryptoPrice">Ціна крипти: 0 USD</div>
+    <button class="button" id="buyButton">Купити крипту</button>
+    <button class="button" id="sellButton">Продати крипту</button>
++
+    <div class="status" id="statusMessage"></div>
+
+    <canvas id="priceChart"></canvas> <!-- Графік зміни ціни -->
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
